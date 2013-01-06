@@ -13,3 +13,9 @@
 # ActiveSupport::Inflector.inflections do |inflect|
 #   inflect.acronym 'RESTful'
 # end
+
+ActiveSupport::Inflector.inflections do |inflect|
+  inflect.irregular 'informacion', 'informaciones'
+  inflect.irregular 'bencina', 'bencinas'
+  inflect.irregular 'informacion_bencina', 'informaciones_bencina'
+end

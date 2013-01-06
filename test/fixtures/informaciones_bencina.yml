@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  region: MyString
+  comuna: MyString
+  precio_minimo: 9.99
+  precio_maximo: 9.99
+  precio_promedio: 9.99
+
+two:
+  region: MyString
+  comuna: MyString
+  precio_minimo: 9.99
+  precio_maximo: 9.99
+  precio_promedio: 9.99
