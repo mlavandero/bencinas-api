@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+info = [
+  {region: "RM", comuna: "Todas"}
+]
+info.each do |i|
+  InformacionBencina.find_or_create_by_region_and_comuna(i[:region], i[:comuna])
+end
