@@ -1,4 +1,6 @@
 BencinasApi::Application.routes.draw do
+  resources :informaciones_bencina
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
