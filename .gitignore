@@ -16,3 +16,6 @@
 
 # Ignorar configuraciones
 /config/database.yml
+
+# Archivos DS_STORE
+.DS_Store
