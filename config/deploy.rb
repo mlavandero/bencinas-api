@@ -42,6 +42,8 @@ set :scm_verbose, true
 set :use_sudo, false
 set :rails_env, :production
 
+after "deploy:update_code", "deploy:configuraciones"
+
 namespace :deploy do
   desc "cause Passenger to initiate a restart"
   task :restart do
@@ -51,6 +53,11 @@ namespace :deploy do
   desc "reload the database with seed data"
   task :seed do
     run "cd #{current_path}; rake db:seed RAILS_ENV=#{rails_env}"
+  end
+
+  desc "copiar configuracion de database.yml"
+  task :configuraciones do
+    run "ln -s #{shared_path}/config/database.yml #{release_path}/config/database.yml"
   end
 end
 
