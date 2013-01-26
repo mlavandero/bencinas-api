@@ -59,6 +59,7 @@ namespace :deploy do
   desc "copiar configuracion de database.yml"
   task :configuraciones do
     run "ln -s #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+    run "ln -s #{shared_path}/config/newrelic.yml #{release_path}/config/newrelic.yml"
   end
 
   desc "actualiza crontab"
