@@ -16,6 +16,7 @@
 
 # Ignorar configuraciones
 /config/database.yml
+/config/newrelic.yml
 
 # Archivos DS_STORE
 .DS_Store

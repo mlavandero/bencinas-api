@@ -33,6 +33,7 @@ gem 'capistrano'
 gem 'rvm-capistrano'
 gem 'capybara'
 gem 'capybara-webkit'
+gem 'newrelic_rpm'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
