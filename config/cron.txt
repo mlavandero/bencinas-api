@@ -8,4 +8,4 @@
 MAILTO='bencinas@mlavandero.org'
 PATH=$PATH:/usr/bin:/bin:/usr/local/bin
 
-0 6,18 * * * bash -l -c 'cd /home/ubuntu/bencinas/current/ && RAILS_ENV=production bundle exec rake bencina:actualizar_precios'
+0 6,18 * * * bash -l -c 'cd /home/ubuntu/bencinas/current/ && rvm use 1.9.3 && RAILS_ENV=production bundle exec rake bencina:actualizar_precios'
