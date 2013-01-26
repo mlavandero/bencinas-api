@@ -42,9 +42,8 @@ set :scm_verbose, true
 set :use_sudo, false
 set :rails_env, :production
 
-before "deploy:symlink", "deploy:crontab"
+before "deploy:create_symlink", "deploy:crontab"
 after "deploy:update_code", "deploy:configuraciones"
-after "deploy:symlink", "deploy:rake_actualizar_precios"
 
 namespace :deploy do
   desc "cause Passenger to initiate a restart"
@@ -69,7 +68,7 @@ namespace :deploy do
 
   desc "ejecutar actualizacion de precios"
   task :rake_actualizar_precios do
-    run "cd #{current_path}; rake bencinas:actuaizar_precios RAILS_ENV=#{rails_env}"
+    run "cd #{current_path}; bundle exec rake bencina:actualizar_precios RAILS_ENV=#{rails_env}"
   end
 
 end
