@@ -1,0 +1,11 @@
+# *   *   *   *   *  /command/to/be/executed
+# |   |   |   |   |
+# +---|---|---|---|---- min (0 - 59)
+#     +---|---|---|---- hour (0 - 23)
+#         +---|---|---- day of month (1 - 31)
+#             +---|---- month (1 - 12)
+#                 +---- day of week (0 - 6) (Sunday=0)
+MAILTO='bencinas@mlavandero.org'
+PATH=$PATH:/usr/bin:/bin:/usr/local/bin
+
+0 6,18 * * * bash -l -c 'cd /home/ubuntu/current/ && RAILS_ENV=production bundle exec rake bencina:actualizar_precios'
