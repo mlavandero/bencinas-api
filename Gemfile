@@ -25,6 +25,8 @@ gem 'jquery-rails'
 gem 'nokogiri'
 gem 'capistrano'
 gem 'rvm-capistrano'
+gem 'capybara'
+gem 'capybara-webkit'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
