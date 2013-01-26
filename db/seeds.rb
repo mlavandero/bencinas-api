@@ -6,9 +6,24 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-info = [
-  {region: "RM", comuna: "Todas"}
+combustibles = [
+  {nombre: "Gasolina 93"},
+  {nombre: "Gasolina 95"},
+  {nombre: "Gasolina 97"},
+  {nombre: "Petroleo Diesel"}
 ]
-info.each do |i|
-  InformacionBencina.find_or_create_by_region_and_comuna(i[:region], i[:comuna])
+combustibles.each do |c|
+  Combustible.find_or_create_by_nombre(c[:nombre])
+end
+
+info = {region: "RM", comuna: "Todas"}
+
+info_combustible_95 = InformacionBencina.first
+info_combustible_95.combustible = Combustible.find_by_nombre("Gasolina 95")
+info_combustible_95.save
+
+Combustible.all.each do |combustible|
+  informacion_bencina = InformacionBencina.find_or_initialize_by_combustible_id(combustible.id)
+  informacion_bencina.update_attributes(info)
+  informacion_bencina.save
 end
