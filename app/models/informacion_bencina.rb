@@ -7,7 +7,7 @@ class InformacionBencina < ActiveRecord::Base
 
   def actualizar_precios
     visit('')
-    select 'Gasolina 95', :from => 'reporte_combustible'
+    select self.combustible.nombre, :from => 'reporte_combustible'
     click_button "Ver reporte"
     sleep 3
     self.precio_minimo = find('table#tabla_resumen td:nth-child(1) b').text[/[0-9\.]+/]
