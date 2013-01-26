@@ -6,4 +6,9 @@ class CombustibleTest < ActiveSupport::TestCase
       assert_match(/^\S*$/, combustible.slug, combustible.slug)
     end
   end
+
+  test "finding combustible by slug" do
+    assert_equal(Combustible.find_by_slug('gasolina-93'), Combustible.find_by_nombre("Gasolina 93"))
+    assert_nil(Combustible.find_by_slug('gasolina-100'))
+  end
 end
