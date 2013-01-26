@@ -24,6 +24,7 @@ end
 group :production do
   gem "execjs"
   gem "therubyracer", :require => 'v8'
+  gem 'headless'
 end
 
 gem 'jquery-rails'
