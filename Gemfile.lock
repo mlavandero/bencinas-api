@@ -150,6 +150,7 @@ DEPENDENCIES
   capybara
   capybara-webkit
   coffee-rails (~> 3.2.1)
+  execjs
   jquery-rails
   mysql2
   nokogiri
