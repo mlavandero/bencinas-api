@@ -1,4 +1,5 @@
 BencinasApi::Application.routes.draw do
+  root :to => 'informaciones_bencina#index' #por ahora
   resources :informaciones_bencina
 
   # The priority is based upon order of creation:
