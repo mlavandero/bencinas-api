@@ -6,9 +6,7 @@ class CombustiblesController < ApplicationController
   end
 
   def show
-    combustible = Combustible.find_by_slug(params[:id])
-    combustible = Combustible.find(params[:id]) if combustible.nil?
-    @combustible = combustible
+    @combustible = Combustible.find_by_id_or_slug params[:id]
   end
 
 end
