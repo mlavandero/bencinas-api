@@ -1,18 +1,17 @@
 class InformacionesBencinaController < ApplicationController
-  respond_to :json
   
   def index
-    render :text => InformacionBencina.all.to_json and return unless params[:combustible_id]
+    @informaciones_bencina = InformacionBencina.all and return unless params[:combustible_id]
     combustible = Combustible.find_by_slug(params[:combustible_id])
     combustible = Combustible.find(params[:combustible_id]) if combustible.nil?
-    render :text => combustible.informacion_bencina.to_json
+    @informaciones_bencina = combustible.informacion_bencina
   end
 
   def show
-    render :text => InformacionBencina.find(params[:id]).to_json and return unless params[:combustible_id]
+    @informacion_bencina = InformacionBencina.find(params[:id]) and return unless params[:combustible_id]
     combustible = Combustible.find_by_slug(params[:combustible_id])
     combustible = Combustible.find(params[:combustible_id]) if combustible.nil?
-    render :text => combustible.informacion_bencina.find(params[:id]).to_json
+    @informacion_bencina = combustible.informacion_bencina.find(params[:id])
   end
 
 end
