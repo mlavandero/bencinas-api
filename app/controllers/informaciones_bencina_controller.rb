@@ -1,4 +1,5 @@
 class InformacionesBencinaController < ApplicationController
+  respond_to :json
   
   def index
     @informaciones_bencina = InformacionBencina.all and return unless params[:combustible_id]
