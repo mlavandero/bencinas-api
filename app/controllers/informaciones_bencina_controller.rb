@@ -3,7 +3,7 @@ class InformacionesBencinaController < ApplicationController
   
   def index
     @informaciones_bencina = InformacionBencina.all and return unless params[:combustible_id]
-    combustible = Combustible.find_by_id_or_slug parmas[:combustible_id]
+    combustible = Combustible.find_by_id_or_slug params[:combustible_id]
     @informaciones_bencina = combustible.informacion_bencina
   end
 
