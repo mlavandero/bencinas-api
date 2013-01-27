@@ -13,9 +13,17 @@ Revisar en la sección Issues las siguientes actualizaciones.
 
 ## Uso
 
-En bencinas.mlavandero.org/informaciones_bencina se obtienen todos los datos posibles.
+Es necesario especificar que se solicita un recurso de tipo json, agregando un .json al final de los request.
 
-Para obtener un dato en particular, bencinas.mlavandero.org/informaciones_bencina/:id
+En `http://bencinas.mlavandero.org/informaciones_bencina`. se obtienen todos los datos posibles.
+
+Para obtener un dato en particular, `http://bencinas.mlavandero.org/informaciones_bencina/:id`
+
+Se agrego la informacion de los combustibles.  Para mantener los recursos de manera RESTful, se agregan las siguientes
+rutas:
+
+* `http://bencinas.mlavandero.org/combustibles/:slug\_o\_id/informaciones_bencina`
+* `http://bencinas.mlavandero.org/combustibles/:slug\_o\_id/informaciones_bencina/:id`
 
 ## Desarrollo
 
@@ -29,4 +37,4 @@ revisar https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-com
 Se hace un especial agradecimiento a Diego Amenabar por haber aportado el código para realizar la actualización de los
 datos.
 
-Revisen su iPhone app en https://itunes.apple.com/us/app/bikemymoney/id578414850?mt=8
+Revisen su App para iPhone en https://itunes.apple.com/us/app/bikemymoney/id578414850?mt=8
