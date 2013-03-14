@@ -1,5 +1,6 @@
-bencinas-api
-============
+#bencinas-api
+
+[![Build Status](https://travis-ci.org/mlavandero/bencinas-api.png)](https://travis-ci.org/mlavandero/bencinas-api)
 
 API que entrega la información del precio de la bencina en Chile.
 
