@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mlavandero/bencinas-api.png)](https://travis-ci.org/mlavandero/bencinas-api)
+
 bencinas-api
 ============
 
