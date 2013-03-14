@@ -195,6 +195,7 @@ DEPENDENCIES
   nokogiri
   rabl
   rails (= 3.2.6)
+  rake
   rspec-rails (~> 2.0)
   rvm-capistrano
   sass-rails (~> 3.2.3)

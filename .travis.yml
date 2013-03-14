@@ -1,5 +1,10 @@
 language: ruby
 rvm:
   - "1.9.3"
-# uncomment this line if your project needs to run something other than `rake`:
+before_script:
+  - "rake db:setup"
 script: bundle exec rspec
+branches:
+  only:
+    - master
+    - development
