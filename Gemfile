@@ -27,10 +27,25 @@ group :production do
   gem 'headless'
 end
 
+group :development do
+  gem 'bullet'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
+
+group :test do
+  gem 'rake'
+end
+
+group :test, :development do
+  gem 'capistrano'
+  gem 'rvm-capistrano'
+  gem "rspec-rails", "~> 2.0"
+  gem "factory_girl_rails", "~> 4.0"
+end
+
 gem 'jquery-rails'
 gem 'nokogiri'
-gem 'capistrano'
-gem 'rvm-capistrano'
 gem 'capybara'
 gem 'capybara-webkit'
 gem 'newrelic_rpm'

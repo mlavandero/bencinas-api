@@ -1,7 +1,0 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
-gasolina_93:
-  nombre: "Gasolina 93"
-
-petroleo_diesel:
-  nombre: "Petroleo Diesel"
