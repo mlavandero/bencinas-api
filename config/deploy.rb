@@ -2,7 +2,7 @@ require "rvm/capistrano"
 require "bundler/capistrano"
 require 'new_relic/recipes'
 
-after "deploy:update", "newrelic:notice_deployment"
+after "deploy:update_code", "newrelic:notice_deployment"
 
 # adjust if you are using RVM, remove if you are not​
 $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
