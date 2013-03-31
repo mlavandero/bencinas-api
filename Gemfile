@@ -7,6 +7,12 @@ gem 'rails', '3.2.6'
 
 gem 'sqlite3'
 gem 'mysql2'
+gem 'jquery-rails'
+gem 'nokogiri'
+gem 'capybara'
+gem 'capybara-webkit'
+gem 'newrelic_rpm'
+gem 'rabl'
 
 
 # Gems used only for assets and not required
@@ -33,35 +39,11 @@ group :development do
   gem 'binding_of_caller'
 end
 
-group :test do
-  gem 'rake'
-end
-
 group :test, :development do
   gem 'capistrano'
   gem 'rvm-capistrano'
   gem "rspec-rails", "~> 2.0"
   gem "factory_girl_rails", "~> 4.0"
+  gem 'rake'
+  gem 'thin'
 end
-
-gem 'jquery-rails'
-gem 'nokogiri'
-gem 'capybara'
-gem 'capybara-webkit'
-gem 'newrelic_rpm'
-gem 'rabl'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
