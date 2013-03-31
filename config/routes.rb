@@ -4,8 +4,8 @@ BencinasApi::Application.routes.draw do
   
   resources :informaciones_bencina, :only => [:index, :show]
 
-  resources :combustibles do
-    resources :informaciones_bencina
+  resources :combustibles, :only => [:index, :show] do
+    resources :informaciones_bencina, :only => [:index, :show]
   end
 
   # The priority is based upon order of creation:
