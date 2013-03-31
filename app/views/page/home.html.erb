@@ -1,2 +1,18 @@
-<h1>Page#home</h1>
-<p>Find me in app/views/page/home.html.erb</p>
+<h1><%= t '.title' %></h1>
+<div class="hero-unit">
+  <p>
+    Esta página pretende ser una introducción para mostrar las funcionalidades que se pueden ocupar en Bencinas API.
+    Bencinas API pretende ser una API JSON simple de utilizar para obtener información sobre el precio de la bencina
+    en Santiago (luego en todo Chile).  Este es un proyecto Open Source, por lo que el código fuente esta disponible
+    en <%= link_to "GitHub", "https://github.com/mlavandero/bencinas-api", :target => '_blank' %>.  En este mismo lugar 
+    se puede ver la documentación para utilizar la API.
+  </p>
+  <p>
+    En el menú de arriba se pueden ver las mismas funcionalidades que se obtienen ocupando la API de manera visual.
+    Se pueden obtener los resultados agregando la termiancion .json al final de los mismo URL.
+  </p>
+  <p>
+    Cualquier contribución es bienvenida y pueden contactarme a través del proyecto en 
+    <%= link_to "GitHub", "https://github.com/mlavandero/bencinas-api", :target => '_blank' %>.
+  </p>
+</div>
