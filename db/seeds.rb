@@ -18,10 +18,6 @@ end
 
 info = {region: "RM", comuna: "Todas"}
 
-info_combustible_95 = InformacionBencina.first
-info_combustible_95.combustible = Combustible.find_by_nombre("Gasolina 95")
-info_combustible_95.save
-
 Combustible.all.each do |combustible|
   informacion_bencina = InformacionBencina.find_or_initialize_by_combustible_id(combustible.id)
   informacion_bencina.update_attributes(info)
