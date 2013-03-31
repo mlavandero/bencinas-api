@@ -1,6 +1,6 @@
 BencinasApi::Application.routes.draw do
 
-  root :to => 'informaciones_bencina#index' #por ahora
+  root :to => 'page#home' #por ahora
   
   resources :informaciones_bencina
 
