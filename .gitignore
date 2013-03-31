@@ -20,3 +20,6 @@
 
 # Archivos DS_STORE
 .DS_Store
+
+# Schema.rb
+/db/schema.rb
