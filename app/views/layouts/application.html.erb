@@ -28,8 +28,8 @@
           <!--<a class="brand" href="#">BencinasApi</a>-->
           <div class="container nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Información", "/path1"  %></li>
-              <li><%= link_to "Combustibles", "/path2"  %></li>
+              <li><%= link_to InformacionBencina.model_name.human, informaciones_bencina_path  %></li>
+              <li><%= link_to Combustible.model_name.human, combustibles_path  %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -55,7 +55,7 @@
         </div><!--/row-->
 
       <footer>
-        <p>&copy; Company 2013</p>
+        <p>&copy; <%= t 'company.name' %> <%= Time.now.year %></p>
       </footer>
 
     </div> <!-- /container -->
