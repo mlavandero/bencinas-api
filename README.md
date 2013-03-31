@@ -35,7 +35,7 @@ revisar https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-com
 
 ## Agradecimientos
 
-Se hace un especial agradecimiento a Diego Amenabar por haber aportado el código para realizar la actualización de los
+Se hace un especial agradecimiento a @gody por haber aportado el código para realizar la actualización de los
 datos.
 
 Revisen su App para iPhone en https://itunes.apple.com/us/app/bikemymoney/id578414850?mt=8
