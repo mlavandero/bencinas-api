@@ -9,6 +9,9 @@ cl:
     models:
       informacion_bencina: "Información"
       combustible: "Combustible"
+    attributes:
+      informacion_bencina:
+        updated_at: "Ultima Actualización"
 
   page:
     home:
@@ -152,13 +155,6 @@ cl:
       header:
         one: No se pudo guardar este/a %{model} porque se encontró 1 error
         other: No se pudo guardar este/a %{model} porque se encontraron %{count} errores
-  helpers:
-    select:
-      prompt: Por favor seleccione
-    submit:
-      create: Crear %{model}
-      submit: Guardar %{model}
-      update: Actualizar %{model}
   number:
     currency:
       format:
