@@ -9,13 +9,13 @@
   <dt><strong><%= model_class.human_attribute_name(:comuna) %>:</strong></dt>
   <dd><%= @informacion_bencina.comuna %></dd>
   <dt><strong><%= model_class.human_attribute_name(:combustible_id) %>:</strong></dt>
-  <dd><%= @informacion_bencina.combustible_id %></dd>
+  <dd><%= @informacion_bencina.combustible %></dd>
   <dt><strong><%= model_class.human_attribute_name(:precio_minimo) %>:</strong></dt>
-  <dd><%= @informacion_bencina.precio_minimo %></dd>
+  <dd><%= number_to_currency(@informacion_bencina.precio_minimo) %></dd>
   <dt><strong><%= model_class.human_attribute_name(:precio_maximo) %>:</strong></dt>
-  <dd><%= @informacion_bencina.precio_maximo %></dd>
+  <dd><%= number_to_currency(@informacion_bencina.precio_maximo) %></dd>
   <dt><strong><%= model_class.human_attribute_name(:precio_promedio) %>:</strong></dt>
-  <dd><%= @informacion_bencina.precio_promedio %></dd>
+  <dd><%= number_to_currency(@informacion_bencina.precio_promedio) %></dd>
 </dl>
 
 <div class="form-actions">

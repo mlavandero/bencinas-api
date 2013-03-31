@@ -22,9 +22,9 @@
         <td><%= informacion_bencina.region %></td>
         <td><%= informacion_bencina.comuna %></td>
         <td><%= informacion_bencina.combustible %></td>
-        <td><%= informacion_bencina.precio_minimo %></td>
-        <td><%= informacion_bencina.precio_maximo %></td>
-        <td><%= informacion_bencina.precio_promedio %></td>
+        <td><%= number_to_currency(informacion_bencina.precio_minimo) %></td>
+        <td><%= number_to_currency(informacion_bencina.precio_maximo) %></td>
+        <td><%= number_to_currency(informacion_bencina.precio_promedio) %></td>
         <td><%=l informacion_bencina.updated_at, :format => :long %></td>
       </tr>
     <% end %>
