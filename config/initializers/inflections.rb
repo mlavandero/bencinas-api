@@ -15,7 +15,8 @@
 # end
 
 ActiveSupport::Inflector.inflections do |inflect|
-  inflect.irregular 'informacion', 'informaciones'
+  inflect.plural /(\w*ion$)/, '\1es'
+  inflect.plural /(\w*i)ón$/, '\1ones'
   inflect.irregular 'bencina', 'bencinas'
   inflect.irregular 'informacion_bencina', 'informaciones_bencina'
 end
