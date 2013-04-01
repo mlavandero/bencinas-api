@@ -43,7 +43,7 @@ set :use_sudo, false
 set :rails_env, :production
 
 before "deploy:create_symlink", "deploy:crontab"
-after "deploy:update_code", "deploy:configuraciones"
+after "deploy:finalize_update", "deploy:configuraciones"
 
 namespace :deploy do
   desc "cause Passenger to initiate a restart"
