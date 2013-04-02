@@ -1,4 +1,4 @@
-#encoding: utf-8
+# encoding: utf-8
 combustibles = [
   {nombre: "Gasolina 93"},
   {nombre: "Gasolina 95"},
