@@ -16,10 +16,69 @@ combustibles.each do |c|
   Combustible.find_or_create_by_nombre(c[:nombre])
 end
 
-info = {region: "RM", comuna: "Todas"}
+comunasRM = [
+  "Todas",
+  "Alhué",
+  "Buin",
+  "Calera de Tango",
+  "Cerrillos",
+  "Cerro Navia",
+  "Colina",
+  "Conchalí",
+  "Curacaví",
+  "El Bosque",
+  "El Monte",
+  "Estación Central",
+  "Huechuraba",
+  "Independencia",
+  "Isla de Maipo",
+  "La Cisterna",
+  "La Florida",
+  "La Granja",
+  "La Pintana",
+  "La Reina",
+  "Lampa ",
+  "Las Condes",
+  "Lo Barnechea",
+  "Lo Espejo",
+  "Lo Prado",
+  "Macul",
+  "Maipú",
+  "María Pinto",
+  "Melipilla",
+  "Ñuñoa",
+  "Padre Hurtado",
+  "Paine",
+  "Pedro Aguirre Cerda",
+  "Peñaflor",
+  "Peñalolén",
+  "Pirque",
+  "Providencia",
+  "Pudahuel",
+  "Puente Alto",
+  "Quilicura",
+  "Quinta Normal",
+  "Recoleta",
+  "Renca",
+  "San Bernardo",
+  "San Joaquín",
+  "San José de Maipo",
+  "San Miguel",
+  "San Pedro",
+  "San Ramón",
+  "Santiago",
+  "Talagante",
+  "Tiltil",
+  "Vitacura"
+]
 
-Combustible.all.each do |combustible|
-  informacion_bencina = InformacionBencina.find_or_initialize_by_combustible_id(combustible.id)
-  informacion_bencina.update_attributes(info)
-  informacion_bencina.save
+comunasRM.each{ |comuna| Comuna.find_or_create_by_nombre(comuna)}
+
+infos = Comuna.all.map(&:id).product(Combustible.all.map(&:id))
+
+infos.each do |info|
+  informacion_bencina = InformacionBencina.find_by_comuna_id_and_combustible_id(info[0], info[1])
+  if informacion_bencina.nil?
+    InformacionBencina.create({region: "RM", comuna_id: info[0], combustible_id: info[1]})
+  end
 end
