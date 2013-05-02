@@ -2,6 +2,6 @@
 
 FactoryGirl.define do
   factory :comuna do
-    nombre "MyString"
+    sequence(:nombre){ |n| "Comuna #{n}" }
   end
 end
