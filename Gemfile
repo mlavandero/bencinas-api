@@ -5,17 +5,15 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem 'mysql2'
 gem 'jquery-rails'
 gem 'nokogiri'
-gem 'capybara'
-gem 'capybara-webkit'
 gem 'newrelic_rpm'
 gem 'rabl'
 gem 'twitter-bootstrap-rails'
 gem 'less-rails'
 gem 'therubyracer'
+gem 'mechanize'
 
 
 # Gems used only for assets and not required
@@ -30,12 +28,6 @@ group :assets do
   gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-end
-
-group :production do
-  gem "execjs"
-  gem "therubyracer", :require => 'v8'
-  gem 'headless'
 end
 
 group :development do
