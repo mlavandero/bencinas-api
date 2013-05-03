@@ -30,8 +30,7 @@ rutas:
 
 Se puede hacer Fork al proyecto, se aceptan Pull Requests.
 
-Es posible que sea necesario instalar la libreria Qt para utilizar Capybara-Webkit, para información de como instalarlo
-revisar https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit
+Se dejo de usar Capybara y Webkit para obtener los datos.  Se ocupa Mechanize y Nokogiri.
 
 ## Agradecimientos
 
