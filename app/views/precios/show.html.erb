@@ -1,24 +1,24 @@
-<%- model_class = InformacionBencina -%>
+<%- model_class = Precio -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human %></h1>
 </div>
 
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:region) %>:</strong></dt>
-  <dd><%= @informacion_bencina.region %></dd>
+  <dd><%= @precio.region %></dd>
   <dt><strong><%= model_class.human_attribute_name(:comuna) %>:</strong></dt>
-  <dd><%= @informacion_bencina.comuna %></dd>
+  <dd><%= @precio.comuna %></dd>
   <dt><strong><%= model_class.human_attribute_name(:combustible_id) %>:</strong></dt>
-  <dd><%= @informacion_bencina.combustible %></dd>
+  <dd><%= @precio.combustible %></dd>
   <dt><strong><%= model_class.human_attribute_name(:precio_minimo) %>:</strong></dt>
-  <dd><%= number_to_currency(@informacion_bencina.precio_minimo) %></dd>
+  <dd><%= number_to_currency(@precio.precio_minimo) %></dd>
   <dt><strong><%= model_class.human_attribute_name(:precio_maximo) %>:</strong></dt>
-  <dd><%= number_to_currency(@informacion_bencina.precio_maximo) %></dd>
+  <dd><%= number_to_currency(@precio.precio_maximo) %></dd>
   <dt><strong><%= model_class.human_attribute_name(:precio_promedio) %>:</strong></dt>
-  <dd><%= number_to_currency(@informacion_bencina.precio_promedio) %></dd>
+  <dd><%= number_to_currency(@precio.precio_promedio) %></dd>
 </dl>
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
-              informaciones_bencina_path, :class => 'btn'  %>
+              precios_path, :class => 'btn'  %>
 </div>

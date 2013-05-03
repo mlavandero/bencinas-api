@@ -1,5 +1,5 @@
 # encoding: utf-8
-class InformacionBencina < ActiveRecord::Base
+class Precio < ActiveRecord::Base
   attr_accessible :comuna, :precio_maximo, :precio_minimo, :precio_promedio, :region, :comuna_id, :combustible_id
 
   belongs_to :combustible

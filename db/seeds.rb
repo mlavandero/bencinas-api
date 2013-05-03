@@ -70,8 +70,8 @@ comunasRM.each{ |comuna| Comuna.find_or_create_by_nombre(comuna)}
 infos = Comuna.all.map(&:id).product(Combustible.all.map(&:id))
 
 infos.each do |info|
-  informacion_bencina = InformacionBencina.find_by_comuna_id_and_combustible_id(info[0], info[1])
-  if informacion_bencina.nil?
-    InformacionBencina.create({region: "RM", comuna_id: info[0], combustible_id: info[1]})
+  precio = Precio.find_by_comuna_id_and_combustible_id(info[0], info[1])
+  if precio.nil?
+    Precio.create({region: "RM", comuna_id: info[0], combustible_id: info[1]})
   end
 end

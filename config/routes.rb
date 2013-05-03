@@ -2,10 +2,10 @@ BencinasApi::Application.routes.draw do
 
   root :to => 'page#home' #por ahora
   
-  resources :informaciones_bencina, :only => [:index, :show]
+  resources :precios, :only => [:index, :show]
 
   resources :combustibles, :only => [:index, :show] do
-    resources :informaciones_bencina, :only => [:index, :show]
+    resources :precios, :only => [:index, :show]
   end
 
   # The priority is based upon order of creation:

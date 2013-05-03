@@ -16,22 +16,21 @@ Revisar en la sección Issues las siguientes actualizaciones.
 
 Es necesario especificar que se solicita un recurso de tipo json, agregando un .json al final de los request.
 
-En `http://bencinas.mlavandero.org/informaciones_bencina`. se obtienen todos los datos posibles.
+En `http://bencinas.mlavandero.org/precios`. se obtienen todos los datos posibles.
 
-Para obtener un dato en particular, `http://bencinas.mlavandero.org/informaciones_bencina/:id`
+Para obtener un dato en particular, `http://bencinas.mlavandero.org/precios/:id`
 
 Se agrego la informacion de los combustibles.  Para mantener los recursos de manera RESTful, se agregan las siguientes
 rutas:
 
-* `http://bencinas.mlavandero.org/combustibles/:slug\_o\_id/informaciones_bencina`
-* `http://bencinas.mlavandero.org/combustibles/:slug\_o\_id/informaciones_bencina/:id`
+* `http://bencinas.mlavandero.org/combustibles/:slug\_o\_id/precios`
+* `http://bencinas.mlavandero.org/combustibles/:slug\_o\_id/precios/:id`
 
 ## Desarrollo
 
 Se puede hacer Fork al proyecto, se aceptan Pull Requests.
 
-Es posible que sea necesario instalar la libreria Qt para utilizar Capybara-Webkit, para información de como instalarlo
-revisar https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit
+Se dejo de usar Capybara y Webkit para obtener los datos.  Se ocupa Mechanize y Nokogiri.
 
 ## Agradecimientos
 
