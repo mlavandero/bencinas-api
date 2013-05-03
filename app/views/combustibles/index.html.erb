@@ -16,7 +16,7 @@
         <td><%= link_to combustible.id, combustible_path(combustible) %></td>
         <td><%= combustible.nombre %></td>
         <td>
-          <%= link_to InformacionBencina.model_name.human, combustible_informaciones_bencina_path(combustible.id), :class => 'btn btn-primary' %>
+          <%= link_to Precio.model_name.human.pluralize, combustible_precios_path(combustible.id), :class => 'btn btn-primary' %>
         </td>
       </tr>
     <% end %>

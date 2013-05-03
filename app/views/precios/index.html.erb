@@ -1,4 +1,4 @@
-<%- model_class = InformacionBencina -%>
+<%- model_class = Precio -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
 </div>
@@ -16,16 +16,16 @@
     </tr>
   </thead>
   <tbody>
-    <% @informaciones_bencina.each do |informacion_bencina| %>
+    <% @precios.each do |precio| %>
       <tr>
-        <td><%= link_to informacion_bencina.id, informacion_bencina_path(informacion_bencina) %></td>
-        <td><%= informacion_bencina.region %></td>
-        <td><%= informacion_bencina.comuna %></td>
-        <td><%= informacion_bencina.combustible %></td>
-        <td><%= number_to_currency(informacion_bencina.precio_minimo) %></td>
-        <td><%= number_to_currency(informacion_bencina.precio_maximo) %></td>
-        <td><%= number_to_currency(informacion_bencina.precio_promedio) %></td>
-        <td><%=l informacion_bencina.updated_at, :format => :long %></td>
+        <td><%= link_to precio.id, precio_path(precio) %></td>
+        <td><%= precio.region %></td>
+        <td><%= precio.comuna %></td>
+        <td><%= precio.combustible %></td>
+        <td><%= number_to_currency(precio.precio_minimo) %></td>
+        <td><%= number_to_currency(precio.precio_maximo) %></td>
+        <td><%= number_to_currency(precio.precio_promedio) %></td>
+        <td><%=l precio.updated_at, :format => :long %></td>
       </tr>
     <% end %>
   </tbody>

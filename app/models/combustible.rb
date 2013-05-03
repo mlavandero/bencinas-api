@@ -1,7 +1,7 @@
 class Combustible < ActiveRecord::Base
   attr_accessible :nombre
 
-  has_many :informacion_bencina
+  has_many :precio
 
   def to_s
     self.nombre

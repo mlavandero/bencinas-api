@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130402004217) do
+ActiveRecord::Schema.define(:version => 20130503032239) do
 
   create_table "combustibles", :force => true do |t|
     t.string   "nombre"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20130402004217) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "informaciones_bencina", :force => true do |t|
+  create_table "precios", :force => true do |t|
     t.string   "region"
     t.integer  "comuna_id"
     t.integer  "combustible_id"
@@ -36,6 +36,6 @@ ActiveRecord::Schema.define(:version => 20130402004217) do
     t.datetime "updated_at",                                     :null => false
   end
 
-  add_index "informaciones_bencina", ["combustible_id"], :name => "index_informaciones_bencina_on_combustible_id"
+  add_index "precios", ["combustible_id"], :name => "index_informaciones_bencina_on_combustible_id"
 
 end
