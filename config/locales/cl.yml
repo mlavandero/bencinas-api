@@ -7,10 +7,10 @@ cl:
 
   activerecord:
     models:
-      informacion_bencina: "Información"
+      precio: "Información"
       combustible: "Combustible"
     attributes:
-      informacion_bencina:
+      precio:
         updated_at: "Ultima Actualización"
 
   page:
