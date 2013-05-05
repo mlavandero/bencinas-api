@@ -7,7 +7,7 @@ cl:
 
   activerecord:
     models:
-      precio: "Información"
+      precio: "Precio"
       combustible: "Combustible"
     attributes:
       precio:
