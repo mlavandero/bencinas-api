@@ -14,6 +14,7 @@ gem 'twitter-bootstrap-rails'
 gem 'less-rails'
 gem 'therubyracer'
 gem 'mechanize'
+gem 'thin'
 
 
 # Gems used only for assets and not required
