@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130503032239) do
+ActiveRecord::Schema.define(:version => 20130505023217) do
 
   create_table "combustibles", :force => true do |t|
     t.string   "nombre"
@@ -23,17 +23,18 @@ ActiveRecord::Schema.define(:version => 20130503032239) do
     t.string   "nombre"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "id_externo"
   end
 
   create_table "precios", :force => true do |t|
     t.string   "region"
     t.integer  "comuna_id"
-    t.integer  "combustible_id"
     t.decimal  "precio_minimo",   :precision => 10, :scale => 2
     t.decimal  "precio_maximo",   :precision => 10, :scale => 2
     t.decimal  "precio_promedio", :precision => 10, :scale => 2
     t.datetime "created_at",                                     :null => false
     t.datetime "updated_at",                                     :null => false
+    t.integer  "combustible_id"
   end
 
   add_index "precios", ["combustible_id"], :name => "index_informaciones_bencina_on_combustible_id"
