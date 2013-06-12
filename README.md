@@ -30,7 +30,8 @@ rutas:
 
 Se puede hacer Fork al proyecto, se aceptan Pull Requests.
 
-Se dejo de usar Capybara y Webkit para obtener los datos.  Se ocupa Mechanize y Nokogiri.
+UPDATE: Se dejo de usar Capybara y Webkit para obtener los datos.  Se ocupa Mechanize y Nokogiri.
+UPDATE: Se cambio la Base de Datos por Postgres.  Además el sitio ahora esta hosteado en http://heroku.com
 
 ## Agradecimientos
 
